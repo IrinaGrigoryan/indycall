@@ -1,0 +1,21 @@
+{% set stepsSettings = [
+    ['Start the call', 'Select your contact or dial a number just like you always do.'],
+    ['Check out the advertisement', 'Wait until it ends or close it manually to proceed.'],
+    ['Do the talking', 'Your call starts automatically, no extra steps required.']
+] %}
+
+<section class="steps">
+    <div class="container">
+        {% for title, teaser in stepsSettings %}
+            <div class="steps__item steps-block {{ '-right' if loop.index === 2 }}">
+                <div class="steps-block__image">
+                    <img src="./images/phone-{{ loop.index }}.png" alt="">
+                </div>
+                <div class="steps-block__content">
+                    <h2 class="steps-block__title">{{ title }}</h2>
+                    <p class="steps-block__teaser">{{ teaser }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

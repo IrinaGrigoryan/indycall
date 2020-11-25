@@ -1,0 +1,15 @@
+// Main settings for project
+@import "helpers/mixins";
+@import "helpers/fonts";
+@import "helpers/base";
+
+//Import main partials
+@import "partials/header";
+@import "partials/footer";
+
+//Import components
+@import "components/steps";
+@import "components/info";
+@import "components/download";
+
+

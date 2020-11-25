@@ -1,0 +1,71 @@
+.footer {
+    background-color: $color-1--1;
+    color: $color-white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 43px 0 30px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(small down) {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        max-width: 195px;
+
+        @include breakpoint(small down) {
+            margin-bottom: 20px;
+        }
+
+        img {
+            @include size(100%, auto);
+            display: block;
+            object-fit: cover;
+        }
+    }
+
+    &__contacts {
+        text-align: right;
+
+        @include breakpoint(small down) {
+            text-align: center;
+        }
+    }
+
+    &__contacts-item {
+        line-height: 1.6;
+        margin: 0;
+
+        @include breakpoint(small down) {
+            margin: 0 0 10px;
+        }
+
+        &:not(:last-child) {
+            a {
+                font-weight: 300;
+                text-decoration: none;
+
+                @include on-event() {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        a {
+            color: $color-white;
+
+            @include breakpoint(small down) {
+                display: block;
+            }
+
+            @include on-event() {
+                text-decoration: none;
+            }
+        }
+    }
+}

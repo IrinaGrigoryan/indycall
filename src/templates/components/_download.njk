@@ -1,0 +1,15 @@
+{% set links = ['googleplay', 'appstore'] %}
+
+<section class="download">
+    <div class="container">
+        <h2 class="download__title">Are you still in doubt?</h2>
+        <p class="download__subtitle">Just get Indycalls and try it!</p>
+        <div class="download__links">
+            {% for link in links %}
+                <a href="https://play.google.com/store/apps/details?id=lv.indycall.client" class="download__link">
+                    <img src="./images/{{ link }}.svg" alt="Download from {{ link }}">
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

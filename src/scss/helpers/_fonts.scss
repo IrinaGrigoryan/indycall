@@ -1,0 +1,14 @@
+// Import fonts
+$import-google-font-1: 'https://fonts.googleapis.com/css?family=Roboto:300,400,700,900';
+
+@if variable-exists(import-google-font-1) {
+  @import url($import-google-font-1);
+}
+
+// Site fonts // http://melchoyce.github.io/fontstacks/
+$typo-1: 'Roboto', 'Franklin Gothic Medium', Tahoma, sans-serif;
+
+
+//Icons font
+$font-awesome: 'Font Awesome 5 Free';
+$fa-font-path: '../fonts'

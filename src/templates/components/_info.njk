@@ -1,0 +1,20 @@
+{% set infoSettings = [
+    ['No credit cards<br> or payments', 'You don’t need money to make a phone call. IndyCall works without credit cards, bills or balances. Only optional extras are for sale', 'wallet'],
+    ['We make real value of your attention', 'For seconds of yours you get minutes of Indycalls. Try it', 'people']
+] %}
+
+<section class="info">
+    <div class="container">
+        <div class="info__wrapper">
+            {% for title, teaser, icon in infoSettings %}
+                <div class="info__item info-block">
+                    <div class="info-block__icon">
+                        <img src="./images/{{ icon }}.svg" alt="{{ icon }}">
+                    </div>
+                    <h2 class="info-block__title">{{ title | safe }}</h2>
+                    <p class="info-block__teaser">{{ teaser }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
