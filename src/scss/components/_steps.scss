@@ -37,12 +37,17 @@
         #{$this}__image {
             transform: translate(20px, 15px);
 
+            @include breakpoint(small down) {
+                transform: none;
+            }
+
             &::before {
                 height: 689px;
                 transform: translate(-55%, -52%) rotate(-45deg);
 
                 @include breakpoint(medium down) {
-                    height: 298px;
+                    height: 321px;
+                    transform: translate(-50%, -52%) rotate(-45deg);
                 }
             }
 
@@ -50,7 +55,7 @@
                 width: 321px;
 
                 @include breakpoint(medium down) {
-                    width: 139px;
+                    width: 189px;
                 }
             }
         }
@@ -64,6 +69,10 @@
         #{$this}__image {
             &::before {
                 transform: translate(-54%, -47%) rotate(-45deg);
+
+                @include breakpoint(medium down) {
+                    transform: translate(-50%, -47%) rotate(-45deg);
+                }
             }
         }
 
@@ -129,7 +138,7 @@
             transform: translate(-50%, -50%) rotate(-45deg);
 
             @include breakpoint(medium down) {
-                @include size(139px, 281px);
+                @include size(179px, 321px);
             }
         }
 
@@ -142,7 +151,7 @@
             z-index: 1;
 
             @include breakpoint(medium down) {
-                width: 107px;
+                width: 157px;
             }
         }
     }
